@@ -192,6 +192,10 @@
       (let [{:keys [root] :as project} (project/read (str project-file))]
         (try
           (binding [leval/*dir* root]
+            ;; lein-git-down obviously expects no .git to be left, but
+            ;; in practice it at least sometimes is, so we try and delete it just in case
+            (git/rm (io/file root ".git"))
+            
             ;; Leiningen runs git commands to obtain information for the jar
             (git/init (io/file root) (-> root (string/split #"/") last))
             (-> project
