@@ -17,5 +17,5 @@
                   :exclusions [clj-chrome-devtools]]
                  [clj-time "66ea91e68583e7ee246d375859414b9a9b7aba57"]                   ;; multiple
                  [cljfmt "806e43b7a7d4e22b831d796f107f135d8efc986a"]                     ;; contains hooks
-                 [org.clojure/clojure "1.9.0"]]
+                 [org.clojure/clojure "1.11.2"]]
   :repositories [["public-github" {:url "git://github.com" :protocol :https}]])
