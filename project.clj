@@ -4,7 +4,8 @@
   :license {:name "MIT"}
   :dependencies [[org.clojure/tools.gitlibs "2.5.190"]
                  [org.eclipse.jgit/org.eclipse.jgit "4.10.0.201712302008-r"]
-                 [leiningen "2.9.4" :scope "provided" :exclusions [commons-codec org.apache.httpcomponents/httpclient org.slf4j/slf4j-api org.apache.httpcomponents/httpcore]]]
+                 [leiningen "2.9.4" :scope "provided" :exclusions [commons-codec org.apache.httpcomponents/httpclient org.slf4j/slf4j-api org.apache.httpcomponents/httpcore]]
+                 [org.apache.httpcomponents/httpclient "4.5.13"]]
   :deploy-repositories [["github" {:url "https://maven.pkg.github.com/b-social/lein-git-down"
                                    :username :env/GITHUB_ACTOR
                                    :password :env/GITHUB_TOKEN
